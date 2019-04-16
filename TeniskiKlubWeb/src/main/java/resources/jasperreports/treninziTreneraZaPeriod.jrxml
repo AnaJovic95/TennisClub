@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2017-06-19T10:11:02 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="treninziTreneraZaPeriod" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cb9a5608-7be5-4b5f-9d0b-16a851a33bde">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<parameter name="datumOd" class="java.lang.String"/>
+	<parameter name="datumDo" class="java.lang.String"/>
+	<parameter name="imeTrenera" class="java.lang.String"/>
+	<parameter name="prezimeTrenera" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="tipTreninga" class="java.lang.String"/>
+	<field name="igrac.ime" class="java.lang.String"/>
+	<field name="igrac.prezime" class="java.lang.String"/>
+	<field name="termin.datum" class="java.sql.Date"/>
+	<field name="termin.trajanje" class="java.lang.Integer"/>
+	<field name="termin.teren" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="87" splitType="Stretch">
+			<textField>
+				<reportElement x="100" y="8" width="102" height="30" uuid="25804e47-5056-4efd-b178-587cd3bc29da"/>
+				<textFieldExpression><![CDATA[$P{datumOd}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="40" width="102" height="30" uuid="50ead0a2-2c08-465b-bb46-a0f783b7b72e"/>
+				<textFieldExpression><![CDATA[$P{datumDo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="540" y="50" width="118" height="30" uuid="9ccf8682-c0fd-4e39-95cd-eeaa646672bc"/>
+				<textFieldExpression><![CDATA[$P{imeTrenera}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="662" y="50" width="140" height="30" uuid="434596ed-2895-4cfc-820f-46252fe511d3"/>
+				<textFieldExpression><![CDATA[$P{prezimeTrenera}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="8" width="100" height="30" uuid="738be1fc-9524-4928-9a0b-5b3305a78a42"/>
+				<text><![CDATA[Datum od :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="38" width="100" height="30" uuid="bf61b7e3-667c-4253-bd43-6d0971c799d7"/>
+				<text><![CDATA[Datum do]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="50" width="100" height="30" uuid="0089babf-4e3e-4090-9fc3-94be8e1cfa99"/>
+				<text><![CDATA[Trener : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="8" width="338" height="30" uuid="280aafcd-1626-45f1-9fcb-080e4785170f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[Spisak treninga za trenera]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="137" height="30" backcolor="#2EEFF2" uuid="57f6f9f2-138b-40e6-869f-ca13619f1186"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Tip treninga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="137" y="0" width="133" height="30" backcolor="#2EEFF2" uuid="ee8df715-aef8-427b-bcfe-113b8e9428af"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Ime igraca]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="270" y="0" width="133" height="30" backcolor="#2EEFF2" uuid="19d9003d-df4b-4c90-a081-2df085bf3541"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Prezime igraca]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="403" y="0" width="133" height="30" backcolor="#2EEFF2" uuid="3f6bab9a-6ef3-4006-9c51-61b007892894"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Datum]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="536" y="0" width="133" height="30" backcolor="#2EEFF2" uuid="2e7f0fdf-b01d-4827-951b-b56c6eb4f8aa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Trajanje]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="669" y="0" width="133" height="30" backcolor="#2EEFF2" uuid="582dfcb3-0b4b-4130-ad3c-c5398ad1ff6c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Teren]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="-1" width="137" height="30" uuid="56bef906-f30b-482d-9777-b20ce00813cf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tipTreninga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="137" y="0" width="133" height="30" uuid="8d2b6159-479d-426e-9232-1cae45fa373c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{igrac.ime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="0" width="133" height="30" uuid="0da0bcb2-df4e-4a2a-9c75-252711920309"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{igrac.prezime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="403" y="0" width="133" height="30" uuid="2facd69c-bef3-433c-89e4-d33a46959bf1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{termin.datum}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="536" y="0" width="133" height="30" uuid="763b69b5-7556-4625-83a1-1017c0aaf037"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{termin.trajanje}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="669" y="0" width="133" height="30" uuid="49595541-bd34-478c-8850-9f8101d3c036"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{termin.teren}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="56" splitType="Stretch">
+			<textField>
+				<reportElement x="330" y="13" width="100" height="30" uuid="5ea82f47-cfb4-4027-9a31-65f40b9df9a4"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
